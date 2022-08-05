@@ -1,0 +1,485 @@
+:root {
+    --main-color: #00b4d8;
+    --sec-color: #343a40;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.con {
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px #ddd;
+    z-index: 1;
+}
+
+.header .con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+}
+
+.links span {
+    float: right;
+    font-size: 30px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+/* .links {
+    position: relative;
+} */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    background-color: #ddd;
+    width: 200px;
+    border-radius: 5px;
+    display: none;
+}
+
+.links:hover ul {
+    display: block;
+}
+
+li {
+    padding: 10px 30px;
+    transition: .3s;
+}
+
+li:hover {
+    padding-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul hr {
+    margin: 0;
+}
+
+.land {
+    /* width: 100%; */
+    height: 400px;
+    background-color: #eee;
+    padding-top: 50px;
+}
+
+.hello {
+    font-weight: bold;
+    color: var(--main-color);
+    text-align: center;
+    font-size: 50px;
+    width: fit-content;
+    margin: 100px auto 0 auto;
+}
+
+.land-text {
+    text-align: center;
+    width: fit-content;
+    margin: 50px auto 0 auto;
+    font-weight: bold;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+    margin: 50px 0;
+}
+
+.f-1,
+.f-2,
+.f-3 {
+    height: 250px;
+    background-color: white;
+    /* width: calc(96% / 3); */
+    transition: .3s;
+    text-align: center;
+}
+
+.f-1:hover {
+    box-shadow: 0px 0px 5px 1px #ddd;
+}
+
+.f-2:hover {
+    box-shadow: 0px 0px 5px 1px #ddd;
+}
+
+.f-3:hover {
+    box-shadow: 0px 0px 5px 1px #ddd;
+}
+
+.f-1 span i,
+.f-2 span i,
+.f-3 span i {
+    font-size: 40px;
+    margin-top: 50px;
+    color: var(--main-color);
+}
+
+.f-lorem {
+    width: 200px;
+    margin: 20px auto 0 auto;
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 100px;
+    opacity: 10%;
+}
+
+.title + p {
+    margin-top: -30px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+
+
+.srv i {
+    display: flex;
+
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+.srv span {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#services {
+    height: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#services .srv {
+    padding: 50px;
+}
+
+.portfolio {
+    background-color: #eee;
+}
+
+.por {
+    display: flex;
+    justify-content: space-around;
+}
+
+.po-1,
+.po-2,
+.po-3 {
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    transition: .3s;
+    margin-bottom: 50px;
+}
+
+.po-1 {
+    background-image: url(../images/pexels-antonio-batinić-4164418.jpg);
+}
+
+.po-2 {
+    background-image: url(../images/pexels-lisa-fotios-1006293.jpg);
+}
+
+.po-3 {
+    background-image: url(../images/pexels-olia-danilevich-4974915.jpg);
+}
+
+/* .po-1:hover {
+    filter: blur(2px);
+    
+}
+
+.po-2:hover {
+    filter: blur(2px);
+}
+
+.po-3:hover {
+    filter: blur(2px);
+} */
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 50px;
+    }
+
+    #services {
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-rows: repeat(4, 1fr); */
+        text-align: center;
+    }
+
+    .por {
+        display: block;
+    }
+
+    .po-1,
+    .po-2,
+    .po-3 {
+        margin: 50px auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .por {
+        display: block;
+    }
+
+    .po-1,
+    .po-2,
+    .po-3 {
+        margin: 10px auto;
+    }
+}
+
+.portfolio h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* .show-me {
+    width: 100%;
+    background-color: #eee;
+    padding-bottom: 50px;
+}
+
+.show {
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    margin: 0 auto;
+    font-weight: 600;
+    border: var(--main-color) 5px solid;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.show:hover {
+    background-color: var(--main-color);
+    color: white;
+} */
+
+.abo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.picture,
+.blog {
+    width: calc(100% / 2);
+}
+
+.blog h2 {
+    border-bottom: 3px solid var(--main-color);
+    width: fit-content;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 250px;
+    background-color: var(--main-color);
+}
+
+.pic {
+    height: 300px;
+    width: 200px;
+    background-image: url(../images/pexels-dominika-roseclay-912396.jpg);
+    box-shadow: 0px 0px 20px 5px;
+}
+
+@media (max-width: 767px) {
+    .abo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* .picture,
+    .blog {
+        width: calc(100% / 2);
+    } */
+    
+    .blog h2 {
+        border-bottom: 3px solid var(--main-color);
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .picture {
+        display: none;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    
+    .picture .cont {
+        display: none;
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        width: 250px;
+        background-color: var(--main-color); */
+    }
+    
+    /* .pic {
+        display: none;
+        height: 300px;
+        width: 200px;
+        background-image: url(../images/pexels-dominika-roseclay-912396.jpg);
+    } */
+    
+    .picture-2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .cont-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 250px;
+    background-color: var(--main-color);
+    }
+    .pic-2 {
+        height: 300px;
+        width: 200px;
+        background-image: url(../images/pexels-dominika-roseclay-912396.jpg);
+        box-shadow: 0px 0px 20px 5px;
+    }
+}
+
+@media (min-width: 768px) {
+    .picture-2 {
+        display: none;
+    }
+    .cont-2 {
+        display: none;
+    }
+    .pic-2 {
+        display: none;
+    }
+}
+
+#contact {
+    background-color: #eee;
+    padding-bottom: 50px;
+}
+
+.co {
+    text-align: center;
+}
+
+.line {
+    font-size: 30px;
+    font-weight: 800;
+    /* margin: 10px 0 10px 10%; */
+    color: var(--main-color);
+}
+
+.email {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: var(--sec-color);
+}
+
+.copy {
+    height: 100%;
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    text-align: center; */
+    /* margin: 0 auto; */
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+}
+
+.copy i {
+    color: var(--main-color);
+    margin-right: 5px;
+}
+
+/* small */
+
+@media (min-width: 768px) {
+	.con {
+		width: 750px;
+	}
+}
+
+/* medium */
+
+@media (min-width: 992px) {
+	.con {
+		width: 970px;
+	}
+}
+
+/* larg */
+
+@media (min-width: 1200px) {
+	.con {
+		width: 1170px;
+	}
+}
